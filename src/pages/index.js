@@ -1,10 +1,10 @@
 import React from "react";
-import { ProfileCard } from "../ProfileCard/profileCard";
+import { ProfileCard } from "../components/profileCard";
 import "../css/styles.css";
 
 function Home() {
   return (
-    <div>
+    <div className="center">
       <ProfileCard />
     </div>
   );

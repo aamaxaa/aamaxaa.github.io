@@ -1,5 +1,5 @@
 import React from "react";
-function MusicPlayer() {
+function Contact() {
   return <p>Under Construction</p>;
 }
-export default MusicPlayer;
+export default Contact;

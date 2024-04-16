@@ -1,13 +1,15 @@
+import "../css/styles.css";
+
 const skills = [
   {
     skill: "Python",
     level: "advanced",
-    color: "blue",
+    color: "midnightblue",
   },
   {
     skill: "Java",
     level: "advanced",
-    color: "orange",
+    color: "saddlebrown",
   },
   {
     skill: "React",
@@ -17,7 +19,7 @@ const skills = [
   {
     skill: "JavaScript",
     level: "advanced",
-    color: "red",
+    color: "darkred",
   },
   {
     skill: "Kotlin",
@@ -27,18 +29,18 @@ const skills = [
   {
     skill: "React Native",
     level: "intermediate",
-    color: "teal",
+    color: "darkslategray",
   },
   {
     skill: "SQL",
     level: "intermediate",
-    color: "magenta",
+    color: "darkviolet",
   },
 ];
 
 function ProfileCard() {
   return (
-    <div className="card">
+    <div className="cardprofile shadow">
       <Avatar />
       <div className="data">
         <Intro />
@@ -50,7 +52,7 @@ function ProfileCard() {
 
 function Skill({ skill, color, level }) {
   return (
-    <div className="skill" style={{ backgroundColor: color }}>
+    <div className="skill" style={{ backgroundColor: color, color: "white" }}>
       <span>{skill}</span>
       <span>
         {level === "advanced" && "💪"}
@@ -78,7 +80,7 @@ function SkillList() {
 
 function Intro() {
   return (
-    <div>
+    <div >
       <h1>Maxine Shi</h1>
       <p className="body">
         A passionate programmer who loves to learn about new technologies and
@@ -90,7 +92,7 @@ function Intro() {
 }
 
 function Avatar() {
-  return <img src="Maxine-Desk.jpg" alt="Maxine Shir" className="avatar" />;
+  return <img src="Maxine-Desk.jpg" alt="Maxine Shir" className="avatar cen" />;
 }
 
 export { ProfileCard };
