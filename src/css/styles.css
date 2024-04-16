@@ -53,6 +53,7 @@
   margin: 40px;
   border: solid;
   min-width: 200px;
+  max-width: 600px;
 
   transition: transform 0.3s ease; /* Transition for smooth expansion */
 }
