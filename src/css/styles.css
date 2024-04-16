@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+.card {
+  display: inline-block;
+  border: solid;
+  min-width: 200px;
+  /* transform-style: preserve-3d; */
+}
+
+.card-custom {
+  width: 80%;
+  transition: max-height 1s ease-in-out; /* Transition max-height instead of height */
+  overflow: hidden;
+  cursor: pointer;
+  max-height: 80px; /* Set initial max-height */
+  flex-direction: column;
+  justify-content: center; /* This will help center the title vertically */
+}
+
+.card-custom:hover {
+  max-height: 600px; /* Increase max-height if needed based on your content */
+}
+
+
+.card-body-hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, display 1s ease-in-out;
+}
+
+.card-custom:hover .card-body-hidden {
+  display: block;
+  opacity: 1;
+}
+
+.card-title-only {
+  margin: 10px 20px; /* Provides consistent margin around the title */
+}
+
+
+/* .card-hover {
+  transition: transform 0.2s; /* Animation for smooth transform */
+  /* } */
+  
+/* .card-profile-container {
+  perspective: 10000px;
+} */
+  
+
+.cardprofile {
+  display: inline-block;
+  width: 40vw;
+  margin: 40px;
+  border: solid;
+  min-width: 200px;
+
+  transition: transform 0.3s ease; /* Transition for smooth expansion */
+}
+
+.cardprofile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.center {
+  text-align: center;
+}
+
+.avatar {
+width: 100%;
+display: block;
+cursor: pointer;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+
+.contact-link {
+  color: #fff; /* Set text color to white */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.5rem; /* Increase font size */
+  font-weight: bold; /* Make text bold */
+}
+
+.contact-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: #ccc; /* Change text color on hover if desired */
+}
+
+.data {
+padding: 32px;
+padding-top: 24px;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill {
+  padding: 2px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #24292e; /* GitHub color scheme */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2c313a; /* Slightly lighter on hover */
+}
+
+.btn-primary:focus {
+  outline: none; /* Removes the focus outline */
+  box-shadow: none; /* Removes the focus shadow */
+}
+
+
+
+
+
+
+ 
