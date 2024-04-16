@@ -7,21 +7,20 @@
   /* transform-style: preserve-3d; */
 }
 
-
 .card-custom {
   width: 80%;
-  transition: height 2s ease;
+  transition: max-height 1s ease-in-out; /* Transition max-height instead of height */
   overflow: hidden;
   cursor: pointer;
-  height: 100px; /* Initial height - ensure this is enough to show the title */
+  max-height: 80px; /* Set initial max-height */
   flex-direction: column;
   justify-content: center; /* This will help center the title vertically */
 }
 
 .card-custom:hover {
-  height: auto;
   max-height: 600px; /* Increase max-height if needed based on your content */
 }
+
 
 .card-body-hidden {
   display: none;
@@ -43,9 +42,9 @@
   transition: transform 0.2s; /* Animation for smooth transform */
   /* } */
   
-.card-profile-container {
+/* .card-profile-container {
   perspective: 10000px;
-}
+} */
   
 
 .cardprofile {
@@ -71,6 +70,32 @@
 .avatar {
 width: 100%;
 display: block;
+cursor: pointer;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+
+.contact-link {
+  color: #fff; /* Set text color to white */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.5rem; /* Increase font size */
+  font-weight: bold; /* Make text bold */
+}
+
+.contact-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: #ccc; /* Change text color on hover if desired */
 }
 
 .data {

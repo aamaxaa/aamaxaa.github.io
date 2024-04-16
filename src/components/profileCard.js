@@ -1,4 +1,6 @@
 import "../css/styles.css";
+import React, { useState } from 'react';
+
 
 const skills = [
   {
@@ -91,8 +93,55 @@ function Intro() {
   );
 }
 
+
 function Avatar() {
-  return <img src="Maxine-Desk.jpg" alt="Maxine Shir" className="avatar cen" />;
+  var contact_link = "https://github.com/aamaxaa";
+  
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div
+      className="avatar-container"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <a
+        href= {contact_link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="Maxine-Desk.jpg"
+          alt="Maxine Shir"
+          className="avatar cen"
+          style={{
+            filter: isHovered ? 'brightness(0.2)' : 'none', // Apply brightness filter when hovered
+            transition: 'filter 0.3s ease', // Add transition for smooth color change
+          }}
+        />
+      </a>
+      {isHovered && (
+        <div className="avatar-text">
+          <a
+            href={contact_link}
+            className="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact me
+          </a>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export { ProfileCard };
