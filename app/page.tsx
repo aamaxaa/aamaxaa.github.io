@@ -14,6 +14,7 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    document.title = "Maxine's Portfolio";
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
