@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
@@ -7,7 +8,6 @@ import { Github, Mail, Linkedin, ExternalLink, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ContactForm from "../components/ContactForm";
-import Image from "next/image";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -204,10 +204,10 @@ export default function Home() {
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src="/Maxine-Desk.jpg"
-                    width={300}
-                    height={300}
+                  <img
+                    src="./Maxine-Desk.jpg"
+                    width="300"
+                    height="300"
                     alt="Developer Portrait"
                     className="w-64 h-64 object-cover rounded-full border-4 border-cyan-400/50"
                   />
@@ -300,10 +300,10 @@ export default function Home() {
                             className="flex items-center bg-white/10 rounded-lg p-4 backdrop-blur-sm w-full"
                           >
                             {/* Logo on the Left */}
-                            <Image
-                              src={"/wpi-logo.png"}
-                              width={50}
-                              height={50}
+                            <img
+                              src={"./wpi-logo.png"}
+                              width="50"
+                              height="50"
                               alt={`${edu.school} Logo`}
                               className="w-12 h-12 object-contain mr-4"
                             />
@@ -613,6 +613,9 @@ export default function Home() {
                 variant="ghost"
                 size="icon"
                 className="text-white hover:text-fuchsia-400 hover:bg-white/5"
+                onClick={() =>
+                  window.open("https://github.com/aamaxaa", "_blank")
+                }
               >
                 <Github className="h-5 w-5" />
               </Button>
@@ -620,6 +623,12 @@ export default function Home() {
                 variant="ghost"
                 size="icon"
                 className="text-white hover:text-fuchsia-400 hover:bg-white/5"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/maxine-s",
+                    "_blank"
+                  )
+                }
               >
                 <Linkedin className="h-5 w-5" />
               </Button>
@@ -627,6 +636,9 @@ export default function Home() {
                 variant="ghost"
                 size="icon"
                 className="text-white hover:text-fuchsia-400 hover:bg-white/5"
+                onClick={() =>
+                  (window.location.href = "mailto:maxine.shi1@outlook.com")
+                }
               >
                 <Mail className="h-5 w-5" />
               </Button>
