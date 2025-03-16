@@ -49,7 +49,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-2xl font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-transparent bg-clip-text"
           >
-            MAXINE SHI
+            MS
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -416,16 +416,6 @@ export default function Home() {
                 tech: ["Python", "Spark", "Power BI"],
               },
               {
-                title: "IoT Device Security Analysis",
-                desc: "Network security assessment using Wireshark and Nmap to identify vulnerabilities in IoT devices.",
-                tech: ["Wireshark", "Nmap", "Python"],
-              },
-              {
-                title: "Meeting Calendar Voting Tool",
-                desc: "Developed a dynamic voting tool to facilitate decision-making in team meetings.",
-                tech: ["JavaScript", "HTML", "AWS Lambda", "SQL", "MongoDB"],
-              },
-              {
                 title: "Autonomous Robotic Arm Polishing",
                 desc: "Developed an AI-driven algorithm for autonomous car surface polishing using a robotic arm.",
                 tech: [
@@ -434,11 +424,25 @@ export default function Home() {
                   "Intel Realsense",
                   "Image Processing",
                 ],
+                link: "https://digital.wpi.edu/concern/student_works/sx61dq66x?locale=en",
               },
+              {
+                title: "IoT Device Security Analysis",
+                desc: "Network security assessment using Wireshark and Nmap to identify vulnerabilities in IoT devices.",
+                tech: ["Wireshark", "Nmap", "Python"],
+                link: "https://drive.google.com/file/d/1434BJIJSuWPZdQYckqe7Lxe5eMr5pzxz/view?usp=sharing",
+              },
+              {
+                title: "Meeting Calendar Voting Tool",
+                desc: "Developed a dynamic voting tool to facilitate decision-making in team meetings.",
+                tech: ["JavaScript", "HTML", "AWS Lambda", "SQL", "MongoDB"],
+              },
+              
               {
                 title: "Portfolio Website",
                 desc: "Custom-built portfolio with interactive UI and project showcases.",
                 tech: ["Next.js", "Tailwind CSS", "Vercel"],
+                link: "https://github.com/aamaxaa/aamaxaa.github.io",
               },
             ].map((project, index) => (
               <motion.div
@@ -489,13 +493,16 @@ export default function Home() {
                       >
                         View Details
                       </Button>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="text-white hover:text-fuchsia-400 hover:bg-white/5"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
+                      {project.link && (
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="text-white hover:text-fuchsia-400 hover:bg-white/5"
+                          onClick={() => window.open(project.link)}
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -624,10 +631,7 @@ export default function Home() {
                 size="icon"
                 className="text-white hover:text-fuchsia-400 hover:bg-white/5"
                 onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/maxine-s",
-                    "_blank"
-                  )
+                  window.open("https://www.linkedin.com/in/maxine-s", "_blank")
                 }
               >
                 <Linkedin className="h-5 w-5" />
